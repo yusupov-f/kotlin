@@ -1,0 +1,43 @@
+fun main() {
+    val numbers = arrayOf(5, 2, 8, 1, 4)
+
+    // 1. Вывести все элементы
+    println("1. Элементы: ${numbers.joinToString()}")
+
+    // 2. Найти сумму элементов
+    val sum = numbers.sum()
+    println("2. Сумма: $sum")
+
+    // 3. Найти максимальный элемент
+    val max = numbers.maxOrNull()
+    println("3. Максимум: $max")
+
+    // 4. Посчитать количество чётных чисел
+    val evenCount = numbers.count { it % 2 == 0 }
+    println("4. Четных: $evenCount")
+
+    // 5. Развернуть массив
+    val reversed = numbers.reversedArray()
+    println("5. Обратный порядок: ${reversed.joinToString()}")
+
+    // 6. Проверить, содержит ли массив заданное число (например, 8)
+    val containsNumber = 8 in numbers
+    println("6. Содержит 8: $containsNumber")
+
+    // 7. Отсортировать по возрастанию
+    val sorted = numbers.sortedArray()
+    println("7. Отсортированный: ${sorted.joinToString()}")
+
+    // 8. Массив строк и самая длинная строка
+    val words = arrayOf("Mobile", "IoT", "Development", "Kotlin")
+    val longestWord = words.maxByOrNull { it.length }
+    println("8. Самое длинное слово: $longestWord")
+
+    // 9. Индекс минимального элемента
+    val minIndex = numbers.indices.minByOrNull { numbers[it] }
+    println("9. Индекс минимума: $minIndex")
+
+    // 10. Умножить каждый элемент на 2
+    val doubled = numbers.map { it * 2 }
+    println("10. Умножили на 2: $doubled")
+}
